@@ -7,7 +7,7 @@ app.use(cors({
    origin: '*',
 }));
 
-app.get('/:id', function (req, res) {
+app.get('/unse/:id', function (req, res) {
    fs.readFile( __dirname + "/" + "data.json", 'utf8', function (err, data) {
       var datas = JSON.parse( data );
       var data = datas["data" + req.params.id] 
